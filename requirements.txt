@@ -18,3 +18,8 @@ streamlit==1.32.0
 tqdm==4.66.2
 python-dateutil==2.9.0.post0
 opencv-python==4.9.0.80
+python-box==6.0.2
+ensure==1.0.2
+pyyaml==6.0
+joblib==1.2.0
+-e .
