@@ -1,68 +1,29 @@
-project_name="invoice_extraction"
 
-# Creating Directories
-mkdir -p $project_name/components
-mkdir -p $project_name/configuration
-mkdir -p $project_name/constants
-mkdir -p $project_name/entity
-mkdir -p $project_name/exception
-mkdir -p $project_name/logger
-mkdir -p $project_name/pipline
-mkdir -p $project_name/utils
-mkdir -p config
-
-# Creating Files
-touch $project_name/__init__.py
-touch $project_name/components/__init__.py
-touch $project_name/components/data_ingestion.py
-touch $project_name/components/data_validation.py
-touch $project_name/components/data_transformation.py
-touch $project_name/components/model_trainer.py
-touch $project_name/components/model_evaluation.py
-touch $project_name/components/model_pusher.py
-
-touch $project_name/configuration/__init__.py
-touch $project_name/constants/__init__.py
-
-touch $project_name/entity/__init__.py
-touch $project_name/entity/config_entity.py
-touch $project_name/entity/artifact_entity.py
-
-touch $project_name/exception/__init__.py
-touch $project_name/logger/__init__.py
-
-touch $project_name/pipline/__init__.py
-touch $project_name/pipline/training_pipeline.py
-touch $project_name/pipline/prediction_pipeline.py
-
-touch $project_name/utils/__init__.py
-touch $project_name/utils/main_utils.py
-
-touch app.py
-touch requirements.txt
-touch Dockerfile
-touch .dockerignore
-touch demo.py
-touch setup.py
-touch config/model.yaml
-touch config/schema.yaml
-
-
-
-"""
 mkdir -p data/raw_invoices
 mkdir -p data/labeled_samples
 mkdir -p src
 mkdir -p notebooks
 mkdir -p output/extracted_json
 
-touch src/ocr.py
-touch src/extractor_llm.py
-touch src/extractor_layoutlm.py
-touch src/parser.py
-touch src/schema.py
+touch src/__init__.py
+touch src/config.py 
+touch src/extract_text.py 
+touch src/extract_structured.py  
+touch src/normalize.py
 touch src/database.py
 touch src/pipeline.py
+touch src/evaluation.py
+touch src/utils.py
+
+mkdir -p tests
+touch tests/test_extract_text.py
+touch tests/test_normalization.py
+touch tests/test_regex_fallback.py
+
+mkdir -p outputs
+touch outputs/invoices.db
+touch outputs/invoices.csv
+touch outputs/line_items.csv
 
 touch notebooks/evaluation.ipynb
 touch notebooks/demo.ipynb
@@ -70,6 +31,5 @@ touch notebooks/demo.ipynb
 touch invoice-extraction/output/database.sqlite
 
 touch requirements.txt
+touch run_pipeline.py
 touch app.py
-
-"""

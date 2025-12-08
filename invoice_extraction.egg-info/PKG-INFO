@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: invoice_extraction
+Version: 0.0.1
+Author: Abhishek
+Author-email: abhishekkori601@gmail.com
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: license-file
